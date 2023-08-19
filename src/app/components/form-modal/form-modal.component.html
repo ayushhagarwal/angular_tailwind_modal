@@ -1,0 +1,29 @@
+<div *ngIf="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="fixed inset-0 z-40 bg-black opacity-50"></div>
+    <div class="bg-white w-1/4 p-6 rounded-lg shadow-lg relative z-50" (mouseleave)="closeModal()">
+      <h2 class="text-xl font-semibold mb-4">Details</h2>
+      <form>
+        <div class="mb-4">
+            <label for="firstName" class="block text-gray-700">First Name:</label>
+            <input type="text" id="firstName" name="firstName" class="w-full border border-gray-300 px-3 py-2 rounded-md">
+          </div>
+          <div class="mb-4">
+            <label for="lastName" class="block text-gray-700">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" class="w-full border border-gray-300 px-3 py-2 rounded-md">
+          </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700">Phone:</label>
+          <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 px-3 py-2 rounded-md">
+        </div>
+        <div class="text-right">
+          <button type="submit" class="bg-teal-500 text-white px-4 py-2 rounded-md">Submit</button>
+        </div>
+      </form>
+      <button class="absolute top-0 right-0 m-2 text-gray-700 hover:text-gray-900" (click)="closeModal()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
